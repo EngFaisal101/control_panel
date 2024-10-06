@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar"dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="css/style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
+"></script>
+ <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
+" rel="stylesheet">
+
+	<title>لوحة التحكم</title>
+<style>
+
+
+</style>
+</head>
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand"><i class='bx bxs-smile icon'></i>المسؤول</a>
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class='bx bxs-dashboard icon' ></i>لوحة التحكم</a></li>
+			<li class="divider" data-text="الرئسية">الرئسية</li>
+
+   <li><a href="#" onclick="openCity(event,'students')"><i class='bx bx-group icon' ></i> المتدربين</a></li>
+
+   <li><a href="#" onclick="openCity(event,'mgrs')"><i class='bx bx-user icon' ></i> المسؤولين</a></li>
+   
+   <li><a href="#" onclick="openCity(event,'dd-main')"><i class='bx bx-table icon' ></i> الجداول</a></li>
+
+<li><a href="#" onclick="openCity(event,'the_sections')"><i class='bx bx-table icon' ></i> الاقسام</a></li>
+
+   <li><a href="#" onclick="openCity(event,'achivements')"><i class='bx bxs-certification icon'></i> الانجازات</a></li>
+
+<li><a href="#" onclick="openCity(event,'blog_section')"><i class='bx bxs-edit icon' ></i> المدونة</a></li>
+
+   <li><a href="#" onclick="openCity(event,'st_violations')"><i class='bx bxs-shield-x icon' ></i> المخالفات</a></li>
+
+   <li><a href="#" onclick="openCity(event,'blackbord')"><i class='bx bx-train icon' ></i> البلاكبورد</a></li>
+
+   <li><a href="#" onclick="openCity(event,'tecinfo')"><i class='bx bx-devices icon' ></i> تقنية المعلومات</a></li>
+
+<li><a href="#" onclick="openCity(event,'section_mgr')"><i class='bx bxs-shield-x icon' ></i>رئيس القسم</a></li>
+
+<li><a href="#" onclick="openCity(event,'section_reqistar')"><i class='bx bxs-shield-x icon' ></i> مسجل القسم</a></li>
+
+<li class="divider" data-text="اقسام اخرى">اقسام اخرى</li>
+
+
+<a href="#" onclick="openc(event,'dept_skill')"><i class='bx bxs-grid-alt icon' ></i> المهارات <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#" onclick="openCity(event,'req_skills')">المهارات</a></li>
+					<li><a href="#" onclick="openCity(event,'skill_re_st')">سجل المهارات</a></li>
+				</ul>
+			</li>
+
+
+<li>
+<a href="#" onclick="openc(event,'dept_skill')"><i class='bx bxs-grid-alt icon' ></i> النشاط <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#" onclick="openCity(event,'req_activity')">النشاطات</a></li>
+					<li><a href="#" onclick="openCity(event,'joinss')">المشاركين</a></li>
+				</ul>
+			</li>
+
+   <li>
+				<a href="#" onclick="openc(event,'menu')"><i class='bx bxs-grid-alt icon' ></i> الارشاد <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#" onclick="openCity(event,'req_del')">طلبات حذف مقرر</a></li>
+					<li><a href="#" onclick="openCity(event,'req_darken')">طلبات تظلم</a></li>
+     <li><a href="#" onclick="openCity(event,'req_study')">طلبات دراسة حالة </a></li>
+					<li><a href="#" onclick="openCity(event,'req_mony')">طلبات اعانة مالية</a></li>
+				</ul>
+			</li>
+
+			<li>
+				<a href="#" onclick="openc(event,'menu_tran')"><i class='bx bxs-train icon' ></i> التدريب التعاوني <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#" onclick="openCity(event,'req_exception')">طلبات اعفاء</a></li>
+					<li><a href="#" onclick="openCity(event,'req_frist')">طلبات اعتماد</a></li>
+					<li><a href="#" onclick="openCity(event,'traning')">طلبات التدريب في مؤسسة</a></li>
+					<li><a href="#" onclick="openCity(event,'vourse')">مؤسسات التدريب</a></li>
+     <li><a href="#" onclick="openCity(event,'letters')">الخطابات </a></li>
+				</ul>
+			</li>
+
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Search...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+  <!--
+			<a href="#" class="nav-link">
+				<i class='bx bxs-bell icon' ></i>
+				<span class="badge">5</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon' ></i>
+				<span class="badge">8</span>
+			</a>
+-->
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="img/logo.png" alt="">
+				<ul class="profile-link">
+					<li><a href="#"><i class='bx bxs-user-circle icon' ></i> <?php echo $admin_namee;?></a></li>
+					<li><a href="#"><i class='bx bxs-cog' ></i>الاعدادات</a></li>
+					<li><a href="index.php?logout=<?php echo $admin_id; ?>" onclick="return confirm('هل أنت متأكد أنك تريد تسجيل الخروج؟');"><i class='bx bxs-log-out-circle' ></i>تسجيل خروج</a></li>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<h1 class="title">لوحة التحكم</h1>
+			<ul class="breadcrumbs">
+				<li><a href="#">الرئسية</a></li>
+				<li class="divider">/</li>
+				<li><a href="#" class="active">لوحة التحكم</a></li>
+			</ul>
+			<div class="info-data">
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2><?php view_num('tb_voilations'); ?></h2>
+							<p>المخالفات</p>
+						</div>
+					</div>
+					<span class="progress" data-value="40%"></span>
+					<span class="label">40%</span>
+				</div>
+
+        <div class="card">
+					<div class="head">
+						<div>
+							<h2>
+ 50          
+</h2>
+<p>الارشاد</p>
+</div>
+</div>
+<span class="progress" data-value="40%"></span>
+<span class="label">40%</span>
+</div>
+
+
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2><?php view_num('tb_letters'); ?></h2>
+							<p>التدريب التعاوني</p>
+						</div>
+					</div>
+					<span class="progress" data-value="60%"></span>
+					<span class="label">60%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2><?php view_num('tb_skills'); ?></h2>
+							<p>المهارات</p>
+						</div>
+
+					</div>
+					<span class="progress" data-value="30%"></span>
+					<span class="label">30%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2><?php view_num('tb_students'); ?></h2>
+							<p>المتدربين</p>
+						</div>
+	
+					</div>
+					<span class="progress" data-value="80%"></span>
+					<span class="label">80%</span>
+				</div>
+
+    <div class="card">
+					<div class="head">
+						<div>
+							<h2><?php view_num('tb_activity'); ?></h2>
+							<p>النشاطات</p>
+						</div>
+		
+					</div>
+					<span class="progress" data-value="80%"></span>
+					<span class="label">80%</span>
+				</div>
+
+    <div class="card">
+					<div class="head">
+						<div>
+							<h2><?php view_num('tb_info_tec'); ?></h2>
+							<p>تقنية المعلومات</p>
+						</div>
+				
+					</div>
+					<span class="progress" data-value="80%"></span>
+					<span class="label">80%</span>
+				</div>
+
+
+    <div class="card">
+					<div class="head">
+						<div>
+							<h2><?php view_num('tb_achivements'); ?></h2>
+							<p>الانجازات</p>
+						</div>
+					
+					</div>
+					<span class="progress" data-value="80%"></span>
+					<span class="label">80%</span>
+				</div>
+			</div>
+	</section>
+	
+	<script src="js/script.js"></script>
+</body>
+</html>
